@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoovu Technical Challenge</title>
+  <script type="text/javascript" src="//tiger-cdn.zoovu.com/advisor-fe-web/api/v1/advisors/BH3GzPwx/js-loader?locale=en-GB"></script>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- No changes are required here --->
+  <div id="zoovu-assistant"></div>
+  <style>
+    body {
+      background-color: #fff;
+      color: #333;
+      font-family: "Open Sans",Helvetica,Arial,sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #337ab7;
+      text-decoration: none;
+    
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .container-0-0-60 * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      font-family: "Open Sans",Helvetica,Arial,sans-serif;
+      outline: none;
+    }
+
+    .container-0-0-45 {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      font-family: "Open Sans",Helvetica,Arial,sans-serif;
+      outline: none;
+
+      > p {
+        color: #656565;
+        font-size: 30.4px;
+        margin: 0px 0px 70px;
+        text-align: center;
+        width: 100%;
+
+        @media (max-width: 920px) {
+          font-size: 19.2px;
+          font-weight: 600;
+          margin: 15px 0px 30px;
+        }
+
+        .subQuestion {
+          font-size: 0.7em;
+          font-weight: 300;
+        }
+      }
+
+      .question-type-hint {
+        color: #656565;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+          letter-spacing: 0.21px;
+          line-height: 1em;
+        }
+      }
+    }
+
+    .container-0-0-26  {
+
+      button {
+        border-bottom-width: 4px;
+        cursor: pointer;
+        font-weight: bold;
+
+        @media (max-width: 920px) {
+          height: 32px;
+        }
+
+        &:after {
+          display: none;
+        }
+
+        &.page-selector {
+          border-color: rgb(250,250,250);
+        }
+        
+        &.visited {
+          border-color: rgb(101, 101, 101);
+        }
+      }
+    }
+
+    .container-0-0-11 {
+      .has-image {
+        .answer-text {
+          padding: 26px 30px 15px 0;
+        }
+      }
+      &.is-selected.has-image .answer-content {
+        &:before,
+        &:after {
+          background: #79b928;
+        }
+      }
+    }
+
+    .container-0-0-12 {
+      .answer {
+        &:hover {
+          .answer-image {
+            transform: scale3d(1, 1, 1);
+
+            &:before {
+              transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0px, 100%, 0px);
+            }
+
+            .image-element {
+              opacity: .6;
+            }
+          }
+        }
+      }
+
+      .answers-wrapper {
+        .answer-image {
+          background: rgb(132, 132, 132);
+          transform: scale3d(1.05, 1.05, 1);
+          transition-duration: 0.3s;
+          transition-property: transform;
+          
+          &:before {
+            background-color: rgba(255, 255, 255, 0.5);
+            content: "";
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0px, -100%, 0px);
+            transition-duration: 0.6s;
+            transition-property: transform;
+            width: 100%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    .container-0-0-60 {
+      .tooltip {
+        .tooltip-inner {
+          background: rgb(221, 221, 221);
+          border-radius: 4px;
+          color: rgb(0, 0, 0);
+          font-size: 14.4px;
+          max-width: 200px;
+          padding: 5px 10px 4px;
+          text-align: center;
+        }
+      }
+    }
+
+    .container-0-0-29 {
+      .navigation-next-button,
+      .navigation-back-button {
+        background: rgb(250, 250, 250);
+        border: none;
+        color: rgb(101, 101, 101);
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        min-width: 150px;
+        padding: 15px;
+        position: relative;
+        text-align: center;
+        text-transform: capitalize;
+
+        &:hover {
+          background: rgb(250, 250, 250);
+        }
+      }
+
+      .navigation-next-in-progress {
+        background: rgb(121, 185, 40);
+        color: rgb(121, 185, 40);
+      }
+    }
+
+    .start-over-button {
+      background: rgb(101, 101, 101);
+      border: none;
+      color: rgb(250,250,250);
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      min-width: 150px;
+      padding: 15px;
+      position: relative;
+      text-align: center;
+      text-transform: capitalize;
+
+      &:hover {
+        background: rgb(101,101,101);
+      }
+    }
+
+    .pages-navigation-wrapper {
+      padding-top: 0;
+    }
+
+    .container-0-0-41 {
+      padding: 0;
+
+      .product-details {
+        a.product-name {
+          color: rgb(48, 48, 48);
+          display: block;
+          font-size: 20px;
+          font-weight: normal;
+          line-height: 1.2;
+          margin-bottom: 10px;
+          min-height: auto;
+          order: 1;
+          padding-left: 16px;
+          text-align: left;
+          text-decoration: none;
+          width: 100%;
+
+          @media (min-width: 767px) {
+            height: 48px;
+          }
+        }
+
+        .product-compare-wrapper {
+          label {
+            background: none;
+            color: rgb(101,101,101);
+          }
+        }
+
+        .properties-title {
+          font-size: 15px;
+          border-top: 1px solid #79b928;
+          font-weight: 600;
+          margin-bottom: 8px;
+          padding: 1;
+          order: 2;
+          text-align: left;
+          margin-bottom: 0;
+          padding: 8px 16px 0;
+        }
+
+        .product-attributes-toggle {
+          color: rgb(121, 185, 40);
+          font-weight: 600;
+          text-decoration: none;
+          text-align: center;
+          text-transform: unset;
+          padding: 0 16px;
+        }
+
+        .product-properties {
+          padding: 0 16px;
+
+          li {
+            font-size: 14px;
+          }
+        }
+
+        .product-footer {
+          a {
+            background: rgb(121, 185, 40);
+            border: none;
+            font-weight: 600;
+            text-transform: unset;
+          }
+        }
+
+        .price-compare-wrapper {
+          text-align: left;
+          order: 2;
+          padding: 0 16px;
+          
+          label {
+            &:hover {
+              background-color: rgb(121, 185, 40);
+              color: white;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .section-type--results_page {
+      .page-selector-wrapper {
+        padding-bottom: 0;
+      }
+    }
+
+    .visit-store-button {
+      background: #eeeeee!important;
+      color: #010101;
+      cursor: pointer;
+      display: block;
+      font-size: 15px;
+      margin-top: 8px;
+      order: 5;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .container-0-0-57 {
+      padding: 8px;
+      border: 1px solid rgb(101,101,101)!important;
+
+      .product-image {
+        .product-top-tile {
+          align-items: center;
+          background: rgb(48, 48, 48);
+          display: flex;
+          color: white;
+          font-size: 13px;
+          gap: 4px;
+          left: 10px;
+          padding: 6px;
+          top: -16px;
+
+          .top-tile-icon {
+            display: none;
+          }
+
+          h4 {
+            font-size: 11.04px;
+            font-weight: 400;
+            line-height: inherit;
+          }
+        }
+      }
+
+      .product-details {
+        a.product-name {
+          color: rgb(48, 48, 48);
+          display: block;
+          font-size: 20px;
+          font-weight: normal;
+          line-height: 1.2;
+          min-height: auto;
+          text-align: left;
+          text-decoration: none;
+          width: 100%;
+        }
+
+        .product-price {
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        .product-compare-wrapper {
+          text-align: left;
+          padding: 0 16px;
+          
+          label {
+            background: none;
+            color: rgb(101,101,101);
+            
+            &:hover {
+              background-color: rgb(121, 185, 40);
+              color: white;
+              border-radius: 4px;
+            }
+          }
+        }
+
+        .properties-title {
+          border-top: 1px solid #79b928;
+          font-weight: 600;
+          margin-bottom: 8px;
+          padding: 1;
+          text-align: left;
+          margin-bottom: 0;
+          padding: 8px 0 0;
+        }
+
+        .product-attributes-toggle {
+          color: rgb(121, 185, 40);
+          font-weight: 600;
+          text-decoration: none;
+          text-align: center;
+          text-transform: unset;
+          padding: 0 16px;
+        }
+
+        .product-properties {
+          padding: 16px 16px 0 0;
+
+          li {
+            font-size: 14px;
+          }
+        }
+
+        .product-footer {
+          align-items: center;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 16px;
+          max-width: initial;
+          width: 100%;
+          
+          a {
+            background: #79b928;
+            border: none;
+            font-weight: 600;
+            height: 42px;
+            margin: 0;
+            text-transform: unset;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  </style>
+</body>
+</html>
