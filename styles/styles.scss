@@ -3,7 +3,7 @@ body {
   color: #333;
   font-family: "Open Sans",Helvetica,Arial,sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   margin: 0;
   overflow-x: hidden;
 }
@@ -60,13 +60,14 @@ a {
 
     @media (max-width: 767px) {
       font-size: 16px;
-      letter-spacing: 0.21px;
+      letter-spacing: 0.2px;
       line-height: 1em;
     }
   }
 }
 
 .container-0-0-26  {
+  position: relative;
 
   button {
     border-bottom-width: 4px;
@@ -174,9 +175,11 @@ a {
     position: relative;
     text-align: center;
     text-transform: capitalize;
+    transition: .3s ease background;
 
     &:hover {
-      background: rgb(250, 250, 250);
+      background: rgb(121,185,40);
+      color: white;
     }
   }
 
@@ -331,7 +334,7 @@ a {
       }
 
       h4 {
-        font-size: 11.04px;
+        font-size: 11px;
         font-weight: 400;
         line-height: inherit;
       }
@@ -415,6 +418,116 @@ a {
         margin: 0;
         text-transform: unset;
         width: 100%;
+      }
+    }
+  }
+}
+
+.container-0-0-26 button {
+  position: initial;
+
+  span {
+    cursor: initial;
+    height: 50px;
+    left: 0;
+    padding-top: 10px;
+    position: absolute;
+    top: 41px;
+    width: 100%;
+
+    @media (max-width: 920px) {
+      height: 32px;
+      padding-top: 0;
+      top: 30px;
+    }
+  
+    &:after {
+      content: '/6';
+    }
+  }
+}
+
+.step-1 {
+  .container-0-0-26 button {
+    &:not([data-index="0"]) {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.step-2 {
+  .container-0-0-26 button {
+    &:not([data-index="1"]) {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.step-3 {
+  .container-0-0-26 button {
+    &:not([data-index="2"]) {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.step-4 {
+  .container-0-0-26 button {
+    &:not([data-index="3"]) {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.step-5 {
+  .container-0-0-26 button {
+    &:not([data-index="4"]) {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.step-6 {
+  .container-0-0-26 button {
+    &:not([data-index="5"]) {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.results-page {
+  .container-0-0-26 {
+    button {
+      position: absolute;
+
+      span {
+        display: none;
+      }
+
+    }
+
+    &:last-child {
+      button {
+        width: 100%;
+  
+        section {
+          &:after {
+            content: 'Results';
+            text-transform: capitalize;
+          }
+        }
       }
     }
   }

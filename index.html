@@ -21,7 +21,7 @@
       color: #333;
       font-family: "Open Sans",Helvetica,Arial,sans-serif;
       font-size: 14px;
-      line-height: 1.42857143;
+      line-height: 1.4;
       margin: 0;
       overflow-x: hidden;
     }
@@ -85,9 +85,13 @@
     @media (max-width: 767px) {
       .container-0-0-45 .question-type-hint {
         font-size: 16px;
-        letter-spacing: 0.21px;
+        letter-spacing: 0.2px;
         line-height: 1em;
       }
+    }
+
+    .container-0-0-26 {
+      position: relative;
     }
 
     .container-0-0-26 button {
@@ -190,11 +194,14 @@
       position: relative;
       text-align: center;
       text-transform: capitalize;
+      -webkit-transition: .3s ease background;
+      transition: .3s ease background;
     }
 
     .container-0-0-29 .navigation-next-button:hover,
     .container-0-0-29 .navigation-back-button:hover {
-      background: #fafafa;
+      background: #79b928;
+      color: white;
     }
 
     .container-0-0-29 .navigation-next-in-progress {
@@ -352,7 +359,7 @@
     }
 
     .container-0-0-57 .product-image .product-top-tile h4 {
-      font-size: 11.04px;
+      font-size: 11px;
       font-weight: 400;
       line-height: inherit;
     }
@@ -441,7 +448,73 @@
       text-transform: unset;
       width: 100%;
     }
-    /*# sourceMappingURL=styles.css.map */
+
+    .container-0-0-26 button {
+      position: initial;
+    }
+
+    .container-0-0-26 button span {
+      cursor: initial;
+      height: 50px;
+      left: 0;
+      padding-top: 10px;
+      position: absolute;
+      top: 41px;
+      width: 100%;
+    }
+
+    @media (max-width: 920px) {
+      .container-0-0-26 button span {
+        height: 32px;
+        padding-top: 0;
+        top: 30px;
+      }
+    }
+
+    .container-0-0-26 button span:after {
+      content: '/6';
+    }
+
+    .step-1 .container-0-0-26 button:not([data-index="0"]) span {
+      display: none;
+    }
+
+    .step-2 .container-0-0-26 button:not([data-index="1"]) span {
+      display: none;
+    }
+
+    .step-3 .container-0-0-26 button:not([data-index="2"]) span {
+      display: none;
+    }
+
+    .step-4 .container-0-0-26 button:not([data-index="3"]) span {
+      display: none;
+    }
+
+    .step-5 .container-0-0-26 button:not([data-index="4"]) span {
+      display: none;
+    }
+
+    .step-6 .container-0-0-26 button:not([data-index="5"]) span {
+      display: none;
+    }
+
+    .results-page .container-0-0-26 button {
+      position: absolute;
+    }
+
+    .results-page .container-0-0-26 button span {
+      display: none;
+    }
+
+    .results-page .container-0-0-26:last-child button {
+      width: 100%;
+    }
+
+    .results-page .container-0-0-26:last-child button section:after {
+      content: 'Results';
+      text-transform: capitalize;
+    }
   </style>
 </body>
 </html>

@@ -2,10 +2,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(function(){
-    
     const container = document.getElementById('zoovu-assistant');
     var buttons = document.querySelectorAll('.page-selector');
     var step = buttons[0].getAttribute('data-step');
+
     if(document.querySelector('.section-type--questionnaire')) {
       container.classList.add("step-" + (new Number(step) + 1))
     } else {
@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
       else {
         container.className = "results-page";
         if(!document.querySelector('.visit-store-button')) {
-          newButton()
+          if(document.querySelector('.top-product')) {
+            newButton()
+          }
           observer.disconnect();
         }
       }
@@ -45,4 +47,3 @@ document.addEventListener('DOMContentLoaded', () => {
     
   }, 4000);
 });
-
