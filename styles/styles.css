@@ -213,8 +213,16 @@ a:hover {
   padding-top: 0;
 }
 
+.container-0-0-4 h3 {
+  color: #656565;
+}
+
 .container-0-0-41 {
   padding: 0;
+}
+
+.container-0-0-41 h3 {
+  color: #656565;
 }
 
 .container-0-0-41 .product-details a.product-name {
@@ -273,6 +281,7 @@ a:hover {
 }
 
 .container-0-0-41 .product-details .product-properties li {
+  color: #656565;
   font-size: 14px;
 }
 
@@ -295,6 +304,10 @@ a:hover {
   background-color: #79b928;
   color: white;
   border-radius: 4px;
+}
+
+.container-0-0-41 .price-compare-wrapper .price {
+  color: #656565;
 }
 
 .section-type--results_page .page-selector-wrapper {
@@ -359,6 +372,7 @@ a:hover {
 }
 
 .container-0-0-57 .product-details .product-price {
+  color: #656565;
   font-size: 20px;
   font-weight: 600;
 }
@@ -403,6 +417,7 @@ a:hover {
 }
 
 .container-0-0-57 .product-details .product-properties li {
+  color: #656565;
   font-size: 14px;
 }
 

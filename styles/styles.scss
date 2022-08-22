@@ -211,8 +211,18 @@ a {
   padding-top: 0;
 }
 
+.container-0-0-4 {
+  h3 {
+    color: #656565;
+  }
+}
+
 .container-0-0-41 {
   padding: 0;
+
+  h3 {
+    color: #656565;
+  }
 
   .product-details {
     a.product-name {
@@ -266,6 +276,7 @@ a {
       padding: 0 16px;
 
       li {
+        color: #656565;
         font-size: 14px;
       }
     }
@@ -292,6 +303,10 @@ a {
         }
       }
     }
+  }
+
+  .price-compare-wrapper .price {
+    color: #656565;
   }
 }
 
@@ -355,6 +370,7 @@ a {
     }
 
     .product-price {
+      color: #656565;
       font-size: 20px;
       font-weight: 600;
     }
@@ -398,6 +414,7 @@ a {
       padding: 16px 16px 0 0;
 
       li {
+        color: #656565;
         font-size: 14px;
       }
     }
