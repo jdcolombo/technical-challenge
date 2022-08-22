@@ -238,7 +238,7 @@ a {
       margin-bottom: 10px;
       min-height: auto;
       order: 1;
-      padding-left: 16px;
+      padding: 0 16px;
       text-align: left;
       text-decoration: none;
       width: 100%;
@@ -258,6 +258,7 @@ a {
     .properties-title {
       font-size: 15px;
       border-top: 1px solid #79b928;
+      color: #656565;
       font-weight: 600;
       margin-bottom: 8px;
       padding: 1;
@@ -397,6 +398,7 @@ a {
 
     .properties-title {
       border-top: 1px solid #79b928;
+      color: #656565;
       font-weight: 600;
       margin-bottom: 8px;
       padding: 1;
